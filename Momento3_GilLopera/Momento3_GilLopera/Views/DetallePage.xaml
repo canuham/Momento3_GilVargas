@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Momento3_GilLopera.Views.DetallePage"
+             xmlns:tdr="clr-namespace:Momento3_GilLopera.Helpers">
+    <Grid>
+        <Grid x:Name="gridEstudio" Grid.Row="0">
+            <Label Text="{tdr:Translate Estudio} " Grid.Column="0" Grid.Row="1" />
+            <Label Text="{Binding Nombre}" Grid.Column="1" Grid.Row="2"/>            
+            <Label Text="{tdr:Translate Descripcion} " Grid.Column="0" Grid.Row="3"/>
+            <Label Text="{Binding Descripcion}"  Grid.Column="1" Grid.Row="3"/>
+            <Label Text="{tdr:Translate Direccion} " Grid.Column="0" Grid.Row="4"/>
+            <Label Text="{Binding Direccion}" Grid.Column="1" Grid.Row="4"/>
+            <Label Text="{tdr:Translate WhatsAppp}" Grid.Column="0" Grid.Row="5"/>
+            <Label Text="{Binding Whatsapp}" Grid.Column="1" Grid.Row="5"/>
+        </Grid>
+        <Grid x:Name="gridArtista" Grid.Row="1">
+            <Label Text="{tdr:Translate Artista}" Grid.Column="0" Grid.Row="0" />
+            <Label Text="{tdr:Translate Imagen} " Grid.Column="0" Grid.Row="1" />
+            <Image Source="{Binding Imagen}" Grid.Column="1" Grid.Row="1" />
+            <Label Text="{tdr:Translate Nombre} " Grid.Column="0" Grid.Row="2" />
+            <Label Text="{Binding Nombre}" Grid.Column="1" Grid.Row="2" />
+            <Label Text="{tdr:Translate Especialidad} " Grid.Column="0" Grid.Row="3" />
+            <Label Text="{Binding Especialidad}" Grid.Column="1" Grid.Row="3" />
+            <Label Text="{tdr:Translate WhatsApp} " Grid.Column="0" Grid.Row="5" />
+            <Label Text="{Binding Telefono}" Grid.Column="1" Grid.Row="5" />            
+            <Button Text="{tdr:Translate Finalizar_reserva}" Grid.ColumnSpan="2" Grid.Row="8" Clicked="Finalizar_Click" />
+            <Button Text="{tdr:Translate Continuar}" Grid.ColumnSpan="2" Grid.Row="9" Clicked="Camara" />
+        </Grid>
+    </Grid>
+</ContentPage>

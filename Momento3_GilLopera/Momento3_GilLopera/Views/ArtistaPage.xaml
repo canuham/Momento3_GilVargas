@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Momento3_GilLopera.Views.ArtistaPage"
+             xmlns:tdr="clr-namespace:Momento3_GilLopera.Helpers">
+    <StackLayout Orientation="Vertical">
+        <StackLayout Orientation="Horizontal">
+            <Label Text="{tdr:Translate Estudio}"/>
+            <Label Text="{Binding Nombre}"/>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="{tdr:Translate Descripcion}"/>
+            <Label Text="{Binding Descripcion}"/>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="{tdr:Translate Direccion}"/>
+            <Label Text="{Binding Direccion}"/>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="{tdr:Translate WhatsApp}"/>
+            <Label Text="{Binding Whatsapp}"/>
+        </StackLayout>
+        <Label Text="{tdr:Translate Artistas}" FontSize="Large"/>
+        <ListView ItemsSource="{Binding Artistas}" ItemSelected="Artista_Selected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Vertical">
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{tdr:Translate Imagen}"/>
+                                <Label Text="{Binding Imagen}"/>
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{tdr:Translate Nombre}"/>
+                                <Label Text="{Binding Nombre}"/>
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{tdr:Translate Especialidad}"/>
+                                <Label Text="{Binding Especialidad}"/>
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{tdr:Translate WhatsApp}"/>
+                                <Label Text="{Binding Telefono}"/>
+                            </StackLayout>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>

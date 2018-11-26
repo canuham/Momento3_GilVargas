@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Momento3_GilLopera.Views.CamaraPage"
+             xmlns:tdr="clr-namespace:Momento3_GilLopera.Helpers">    
+        <ScrollView>
+            <StackLayout Spacing="10" Padding="10">
+                <Button x:Name="takePhoto" Text="{tdr:Translate Tomar_foto }"/>
+                <Button x:Name="pickPhoto" Text="{tdr:Translate Elegir_foto}"/>
+                <Button x:Name="takeVideo" Text="{tdr:Translate Hacer_video}"/>
+                <Button x:Name="pickVideo" Text="{tdr:Translate Elegir_video}"/>
+                <Image x:Name="image"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage>

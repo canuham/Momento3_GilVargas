@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Momento3_GilLopera.Views.TatuajesPage"
+             xmlns:tdr="clr-namespace:Momento3_GilLopera.Helpers">
+    <ListView x:Name="listTatuajes" HasUnevenRows="True" ItemSelected="Tatuaje_Selected">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <StackLayout Orientation="Horizontal" Margin="15">                        
+                        <StackLayout Orientation="Vertical">
+                            <Label Text="{Binding Nombre}" />                            
+                            <Label Text="{Binding Descripcion}" />                            
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{tdr:Translate Direccion}" />
+                                <Label Text="{Binding Direccion}" />
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{tdr:Translate WhatsApp}" />
+                                <Label Text="{Binding Whatsapp}" />
+                            </StackLayout>
+                        </StackLayout>
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</ContentPage>
